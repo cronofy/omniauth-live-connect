@@ -15,9 +15,9 @@ module OmniAuth
         :response_type => 'code'
       }
 
-      def callback_url
-        super.sub('http:', 'https:')
-      end
+      # def callback_url
+      #   super.sub('http:', 'https:')
+      # end
 
       def request_phase
         super
