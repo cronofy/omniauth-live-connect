@@ -30,7 +30,7 @@ module OmniAuth
           'name' => raw_info['name'],
           'first_name' => raw_info['first_name'],
           'last_name' => raw_info['last_name'],
-          'email' => raw_info['emails']['preferred']
+          'email' => raw_info['emails']['account'],
         }
       end
 
