@@ -14,6 +14,7 @@ module OmniAuth
       option :authorize_params, {
         :response_type => 'code'
       }
+      option :authorize_options, [:scope, :login_hint]
 
       # def callback_url
       #   super.sub('http:', 'https:')
