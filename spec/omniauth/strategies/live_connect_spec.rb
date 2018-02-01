@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../spec_helper.rb'
 
 describe OmniAuth::Strategies::LiveConnect do
   let(:access_token) { stub('AccessToken', :options => {}) }
@@ -19,11 +19,11 @@ describe OmniAuth::Strategies::LiveConnect do
     end
 
     it 'should have correct authorize url' do
-      subject.options.client_options.authorize_url.should eq('https://login.live.com/oauth20_authorize.srf')
+      subject.options.client_options.authorize_url.should eq('/oauth20_authorize.srf')
     end
 
     it 'should have correct token url' do
-      subject.options.client_options.token_url.should eq('https://login.live.com/oauth20_token.srf')
+      subject.options.client_options.token_url.should eq('/oauth20_token.srf')
     end
   end
 
