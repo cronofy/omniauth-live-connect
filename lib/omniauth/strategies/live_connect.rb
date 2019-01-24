@@ -16,9 +16,9 @@ module OmniAuth
       }
       option :authorize_options, [:scope, :login_hint]
 
-      # def callback_url
-      #   super.sub('http:', 'https:')
-      # end
+      def callback_url
+        options[:redirect_uri] || (full_host + script_name + callback_path)
+      end
 
       def request_phase
         super
